@@ -1,11 +1,52 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36811.4 d17.14
+VisualStudioVersion = 17.14.36811.4
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhitePayment.API", "src\WhitePayment.API\WhitePayment.API.csproj", "{8E23235F-2E49-4630-A4C8-74B9F933442B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhitePayment.Domain", "src\WhitePayment.Domain\WhitePayment.Domain.csproj", "{46B134CB-4D38-4FF2-8FD0-194190C5E34F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhitePayment.Application", "src\WhitePayment.Application\WhitePayment.Application.csproj", "{CD13251B-E01F-41A1-A081-B4BC466F8874}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhitePayment.Infrastructure", "src\WhitePayment.Infrastructure\WhitePayment.Infrastructure.csproj", "{23F292FD-676B-465B-9BC4-5127D782A348}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8E23235F-2E49-4630-A4C8-74B9F933442B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E23235F-2E49-4630-A4C8-74B9F933442B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E23235F-2E49-4630-A4C8-74B9F933442B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E23235F-2E49-4630-A4C8-74B9F933442B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46B134CB-4D38-4FF2-8FD0-194190C5E34F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46B134CB-4D38-4FF2-8FD0-194190C5E34F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46B134CB-4D38-4FF2-8FD0-194190C5E34F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46B134CB-4D38-4FF2-8FD0-194190C5E34F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD13251B-E01F-41A1-A081-B4BC466F8874}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD13251B-E01F-41A1-A081-B4BC466F8874}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD13251B-E01F-41A1-A081-B4BC466F8874}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD13251B-E01F-41A1-A081-B4BC466F8874}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23F292FD-676B-465B-9BC4-5127D782A348}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23F292FD-676B-465B-9BC4-5127D782A348}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23F292FD-676B-465B-9BC4-5127D782A348}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23F292FD-676B-465B-9BC4-5127D782A348}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8E23235F-2E49-4630-A4C8-74B9F933442B} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{46B134CB-4D38-4FF2-8FD0-194190C5E34F} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{CD13251B-E01F-41A1-A081-B4BC466F8874} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{23F292FD-676B-465B-9BC4-5127D782A348} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0883E2F2-A5B4-4125-9DE1-5417288A42EC}
