@@ -1,6 +1,6 @@
 ﻿namespace WhitePayment.Domain
 {
-    public class Class1
+    public class Payment
     {
 
     }
