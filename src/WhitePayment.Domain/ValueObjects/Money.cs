@@ -1,7 +1,7 @@
 ﻿namespace WhitePayment.Domain.ValueObjects
 {
-    public class Money
-    {
-
-    }
+    public record Money(
+        decimal Amount,
+        string Currency = "NGN"
+        );
 }
