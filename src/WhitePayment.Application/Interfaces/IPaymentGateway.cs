@@ -1,6 +1,11 @@
-﻿namespace WhitePayment.Application.Interfaces
+﻿using WhitePayment.Application.Dto;
+using WhitePayment.Domain.ValueObjects;
+
+namespace WhitePayment.Application.Interfaces
 {
-    internal class IPaymentGateway
+    public interface IPaymentGateway
     {
+        Task<InitializePaymentResponse> InitializeAsync(string email, Money amount);
+        Task<bool> VerifyAsync(string reference);
     }
 }

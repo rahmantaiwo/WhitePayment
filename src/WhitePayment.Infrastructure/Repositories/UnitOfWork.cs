@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using WhitePayment.Application.Interfaces;
+using WhitePayment.Infrastructure.Data;
 
 namespace WhitePayment.Infrastructure.Repositories
 {
-    internal class UnitOfWork
+    public class UnitOfWork(PaymentDbContext context) : IUnitOfWork
     {
+        public async Task SaveChangesAsync()
+        {
+            await context.SaveChangesAsync();
+        }
     }
 }

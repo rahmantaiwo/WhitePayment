@@ -1,6 +1,7 @@
 ﻿namespace WhitePayment.Application.Interfaces
 {
-    internal class IUnitOfWork
+    public interface IUnitOfWork
     {
+        Task SaveChangesAsync();
     }
 }
