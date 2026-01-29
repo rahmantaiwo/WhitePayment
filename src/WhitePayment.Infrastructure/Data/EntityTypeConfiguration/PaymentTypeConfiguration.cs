@@ -13,7 +13,7 @@ namespace WhitePayment.Infrastructure.Data.EntityTypeConfiguration
 
             builder.OwnsOne(x => x.Amount, money =>
             {
-                money.Property(m => m.Amount).HasColumnName("Amount");
+                money.Property(m => m.Value).HasColumnName("Amount");
             });
         }
     }

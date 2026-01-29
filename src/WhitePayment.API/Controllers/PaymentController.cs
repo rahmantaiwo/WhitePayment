@@ -35,15 +35,16 @@ public class PaymentController(IPaymentService service, IWebhookHandlerService w
         return StatusCode(result.StatusCode, result);
     }
 
+
     /// <summary>
-    /// Paystack webhook endpoint
+    /// Paystack webhook endpoint (server-to-server)
     /// </summary>
-    [HttpPost]
+    [HttpPost("webhook")]
     [ProducesResponseType(typeof(BaseResponseModel<string>), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
-    [ProducesResponseType(typeof(BaseResponseModel<object>), StatusCodes.Status500InternalServerError)]
-    public async Task<IActionResult> Handle()
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+    public async Task<IActionResult> HandleWebhook()
     {
         using var reader = new StreamReader(Request.Body);
         var payload = await reader.ReadToEndAsync();
@@ -51,9 +52,7 @@ public class PaymentController(IPaymentService service, IWebhookHandlerService w
         if (!Request.Headers.TryGetValue("x-paystack-signature", out var signatureHeader))
             return BadRequest();
 
-        var result = await webhookHandlerService
-            .HandleWebhookAsync(payload, signatureHeader);
-
+        var result = await webhookHandlerService.HandleWebhookAsync(payload, signatureHeader);
         return StatusCode(result.StatusCode, result);
     }
 }
