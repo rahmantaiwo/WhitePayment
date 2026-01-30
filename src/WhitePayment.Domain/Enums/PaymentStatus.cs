@@ -1,7 +1,9 @@
 ﻿namespace WhitePayment.Domain.Enum
 {
-    public class PaymentStatus
+    public enum PaymentStatus
     {
-
+        Pending,
+        Successful,
+        Failed
     }
 }

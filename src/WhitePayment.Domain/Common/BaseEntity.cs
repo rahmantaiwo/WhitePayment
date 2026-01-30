@@ -1,6 +1,7 @@
 ﻿namespace WhitePayment.Domain.Common
 {
-    internal class BaseEntity
+    public abstract class BaseEntity
     {
+        public int Id { get; set; }
     }
 }

@@ -1,7 +1,8 @@
 ﻿namespace WhitePayment.Domain.Interface
 {
-    public class IPaymentRepository
+    public interface IPaymentRepository
     {
-
+        Task AddAsync(Payment payment);
+        Task<Payment?> GetByReferenceAsync(string reference);
     }
 }
